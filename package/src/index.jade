@@ -3,29 +3,25 @@
 doctype html
 
 html
-  h1 Welcome to Jade
-  p
-    | Text can be included in a number of
-    | different ways.
-  p.
-    This way is hsortest if you need big
-    blocks of text spanning multiple
-    lines.
-  h2(id="title") Welcome to Jade
-  button(class="btn",data-action="bea").
-    Be Awesome
-
-  h3#title Welcome to Jade
-  button.btn(data-action="bea") Awesome
-
-//- var user = {name: 'John'}
-if user
-  div.welcomebox
-  p.
-    Welcome, #{user.name}
-else
-  div.loginbox
-    form(name="login", action="/login", method="post")
-      input(type="text", name="user")
-      input(type="password", name="pass")
-      input(type="submit", value="login")
+  head
+    title Homepage - Tiger
+  body
+    .page-wrap
+      .navbar.navbar-default.hcnavigation(role='navigation')
+        .container.hccontainer
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+          .navbar-collapse.cooapse.hccollapse
+            ul.nav.navbar-nav.navbar-right
+              li.hctab
+                a.hcactive(href='#') ABOUT ME
+              li.hctab
+                a(href='work.html') WORK
+              li.hctab
+                a(href='contact.html') CONTACT
+      .hcbanner
+        .container
+          ul#hcbanner
